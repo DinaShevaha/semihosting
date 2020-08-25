@@ -7,6 +7,15 @@
 #include <stdint.h>
 
 
+struct pin_s{
+    unsigned int gpio : 4;
+    unsigned int gpio : 4;
+    unsigned int gpio : 1;
+};
+
+struct pin_s pin_btn_up = { .gpio = ...};
+
+if (btn_pressed(@pin_btn_up));
 void softdelay(uint32_t N)
 {
 	while (N--) __asm__("nop");
